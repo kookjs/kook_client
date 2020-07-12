@@ -1,0 +1,25 @@
+{
+  "name": "@kookjs-client/admin",
+  "version": "1.0.0",
+  "description": "Admin Panel",
+  "author": "Aman Khanakia",
+  "license": "MIT",
+  "homepage": "https://kook.khanakia.com",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/khanakia"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kookjs/kook"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "inversify": "^5.0.1"
+  },
+  "devDependencies": {
+
+  }
+}

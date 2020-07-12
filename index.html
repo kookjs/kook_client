@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title><%= htmlWebpackPlugin.options.title %></title>
+
+		<!-- Google / Search Engine Tags -->
+		<meta itemprop="name" content="<%= htmlWebpackPlugin.options.title %>">
+		<meta itemprop="description" content="<%= htmlWebpackPlugin.options.meta.description %>">
+		<meta itemprop="image" content="<%= htmlWebpackPlugin.options.logoUrl %>">
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://www.theuxm.com">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>">
+		<meta property="og:description" content="<%= htmlWebpackPlugin.options.meta.description %>">
+		<meta property="og:image" content="<%= htmlWebpackPlugin.options.logoUrl %>">
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="<%= htmlWebpackPlugin.options.title %>">
+		<meta name="twitter:description" content="<%= htmlWebpackPlugin.options.meta.description %>">
+		<meta name="twitter:image" content="<%= htmlWebpackPlugin.options.logoUrl %>">
+
+	</head>
+	<body>
+		<div id="root"></div>
+		<% for (var style in htmlWebpackPlugin.options.styles) { %>
+			<link rel="stylesheet" href="<%= htmlWebpackPlugin.options.styles[style] %>"/>
+		<% } %>
+		<% for (var script in htmlWebpackPlugin.options.scripts) { %>
+			<script type="text/javascript" src="<%= htmlWebpackPlugin.options.scripts[script] %>"></script>
+		<% } %>
+	</body>
+</html>
