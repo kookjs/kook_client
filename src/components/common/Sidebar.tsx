@@ -1,19 +1,12 @@
-import { Layout, Menu, Breadcrumb } from 'antd';
-import {
-  DesktopOutlined,
-  PieChartOutlined,
-  FileOutlined,
-  TeamOutlined,
-  UserOutlined,
-} from '@ant-design/icons';
+import { Layout, Menu } from 'antd';
 import React, { useState } from 'react';
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 import { Link, useHistory } from "react-router-dom";
 
-function Sidebar(props) {
+export default function Sidebar(props) {
   const { className } = props
   const [collapsed, setCollapsed] = useState(false)
 
@@ -48,5 +41,3 @@ function Sidebar(props) {
 	);
 
 }
-
-export default Sidebar

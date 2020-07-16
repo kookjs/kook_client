@@ -1,32 +1,23 @@
 import React, { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import classNames from 'classnames'
-import Header from './Header'
-import Footer from './Footer'
+import Header from '../common/Header'
+import Footer from '../common/Footer'
 
 import { Layout, Menu, Breadcrumb } from 'antd';
 const {  Content, Sider } = Layout;
 
-import Sidebar from './Sidebar'
+import Sidebar from '../common/Sidebar'
 import Authenticate from '@kookjs-client/auth/components/Authenticate'
 import { getPlugin } from '@kookjs-client/core'
 import Auth from '@kookjs-client/auth'
+import { LayoutProps } from '../../types'
 
-function LayoutPrivate(props: {className?: string, children: React.ReactChild}) {
+export default (props: LayoutProps) => {
   const { className } = props
-	const history = useHistory()
-	
+
 	const auth = getPlugin(Auth)
 
-	// if(!Sapp.Auth.check()) {
-	// 	history.push('/login')
-	// 	return null
-	// }
-
-	useEffect(() => {
-		// Sapp.Auth.validateToken()
-	})
-	
 	const cssClass = classNames(className, {'isLoggedIn' : auth.isUserLoggedIn()} )
 
 	return (
@@ -48,5 +39,3 @@ function LayoutPrivate(props: {className?: string, children: React.ReactChild}) 
 		</div>
 	);
 }
-
-export default LayoutPrivate

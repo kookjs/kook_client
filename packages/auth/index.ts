@@ -39,14 +39,18 @@ export default class Auth {
       path: "/change_password",
       exact: true,
       component: ChangePassword,
-      layoutCssClass: 'center'
+      layoutCssClass: 'center',
+      // layoutName: 'default' ,
+      authenticate: true,
+      title: 'Change Password'
     })
 
     route.add({
       path: "/auth/forgot_password",
       exact: true,
       component: ForgotPassword,
-      layoutCssClass: 'center'
+      layoutCssClass: 'center',
+     
     })
 
     route.add({

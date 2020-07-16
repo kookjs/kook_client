@@ -15,9 +15,8 @@ export default function Login(props) {
 	const history = useHistory();
 	const { register, handleSubmit, errors } = useForm({
 		defaultValues: {
-			currentPassword: null,
-      password: null,
-      confirmPassword: null
+			token: null,
+      password: null      
 		}
 	});
 	const client = useApolloClient();
